@@ -17,12 +17,14 @@
         }
         .swiper-container {
             width: 100%;
-            max-width: 230px;
-            aspect-ratio: 430/932;
-            margin: 50px auto;
+            margin: 50px 0;
+            box-sizing: border-box;
+            padding-inline: 30px;
         }
 
         .swiper-slide {
+            max-width: 230px;
+            aspect-ratio: 430/932;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,9 +111,9 @@
     document.addEventListener('DOMContentLoaded', function() {
         const swiper = new Swiper('.swiper-container', {
             // 기본 설정
-            slidesPerView: 1,
+            slidesPerView: 'auto',
             spaceBetween: 30,
-            centeredSlides: true,
+            centeredSlides: false,
             // 네비게이션 화살표
             navigation: {
                 nextEl: '.swiper-button-next',
